@@ -12,15 +12,9 @@ import java.sql.SQLException;
  * @author user
  */
 public class ConexionDB{
-    private static final String URL = env("DB_URL",
-            "jdbc:sqlserver://localhost:1433;databaseName=AvanzadaII;encrypt=true;trustServerCertificate=true;");
-    private static final String USER = env("DB_USER", "sa");
-    private static final String PASSWORD = env("DB_PASSWORD", "");
-
-    private static String env(String clave, String porDefecto) {
-        String v = System.getenv(clave);
-        return (v == null || v.isBlank()) ? porDefecto : v;
-    }
+    private static final String URL = "jdbc:sqlserver://progav2.database.windows.net:1433;database=avanzadaii;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"; 
+    private static final String USER = "japuerto@progav2";
+    private static final String PASSWORD = "ProgAv226";
 
     private static Connection conexion = null;
     private ConexionDB(){}  
