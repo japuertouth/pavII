@@ -1,0 +1,9 @@
+target/
+*.class
+.vercel/
+.idea/
+.vscode/
+nbproject/private/
+*.log
+*.rar
+*.zip
